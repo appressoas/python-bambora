@@ -6,7 +6,7 @@ import requests
 # Set correct test tokens and merchant number 
 ACCESSTOKEN = 'ACCESSTOKENTEST'
 MERCHANTNUMBER = 'MERCHANTNUMBERTEST'
-SECRETTOKEN = 'SECRETTOKEN'
+SECRETTOKEN = 'SECRETTOKENTEST'
 
 auth_user = '{}@{}'.format(ACCESSTOKEN, MERCHANTNUMBER)
 auth_password = SECRETTOKEN
