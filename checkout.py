@@ -3,14 +3,14 @@
 import json
 import requests
 
-# Test tokens and merchant number 
-ACCESSTOKEN = 'TOKEN'
-MERCHANTNUMBER = 'MERCHANT'
-SECRETTOKEN = 'SECRET'
+# Set correct test tokens and merchant number 
+ACCESSTOKEN = 'ACCESSTOKENTEST'
+MERCHANTNUMBER = 'MERCHANTNUMBERTEST'
+SECRETTOKEN = 'SECRETTOKEN'
 
 auth_user = '{}@{}'.format(ACCESSTOKEN, MERCHANTNUMBER)
 auth_password = SECRETTOKEN
-checkout_url = 'https://api.v1.checkout.bambora.com/sessions'
+sessions_url = "https://api.v1.checkout.bambora.com/sessions"
 
 headers = {
     'Content-Type': 'application/json',
@@ -39,9 +39,13 @@ post_data = {
 }
 
 result = requests.post(
-    url=checkout_url,
+    url=sessions_url,
     auth=(auth_user, auth_password),
     data=json.dumps(post_data),
     headers=headers
 )
-print(result.json())
+
+result_data = result.json()
+checkout_url = result_data.get('url')
+
+print(checkout_url)
