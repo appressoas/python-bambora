@@ -21,11 +21,11 @@ post_data = {
     'language': 'no-NB',
     'customer': {
         'phonenumbercountrycode': '47',
-        'phonenumber': '93492558',
-        'email': 'magne@appresso'
+        'phonenumber': 'XXYYXXZZ',
+        'email': 'grandma@example.com'
     },
     'order': {
-        'id': 'TestDonation123',
+        'id': 'Test123',
         'amount': '1000',
         'currency': 'NOK',
     },
